@@ -6,7 +6,16 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E6EFC08CDBB844FE399F3297 /* Pods_RickyMortyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FD9EA594E4DEABC4E8488D0 /* Pods_RickyMortyApp.framework */; };
+		EF02CF782E5CAF7C0097A604 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = EF02CF772E5CAF7C0097A604 /* FirebaseAnalytics */; };
+		EF02CF7A2E5CAF7C0097A604 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = EF02CF792E5CAF7C0097A604 /* FirebaseCore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		4FD9EA594E4DEABC4E8488D0 /* Pods_RickyMortyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RickyMortyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		540088688F8C844CA8EC37B6 /* Pods-RickyMortyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RickyMortyApp.debug.xcconfig"; path = "Target Support Files/Pods-RickyMortyApp/Pods-RickyMortyApp.debug.xcconfig"; sourceTree = "<group>"; };
+		BB6DA26D9E37D9E39322B906 /* Pods-RickyMortyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RickyMortyApp.release.xcconfig"; path = "Target Support Files/Pods-RickyMortyApp/Pods-RickyMortyApp.release.xcconfig"; sourceTree = "<group>"; };
 		EF02C3232E572AD90097A604 /* RickyMortyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickyMortyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -36,17 +45,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF02CF782E5CAF7C0097A604 /* FirebaseAnalytics in Frameworks */,
+				EF02CF7A2E5CAF7C0097A604 /* FirebaseCore in Frameworks */,
+				E6EFC08CDBB844FE399F3297 /* Pods_RickyMortyApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		67D06827D21E080895EC2EB9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				540088688F8C844CA8EC37B6 /* Pods-RickyMortyApp.debug.xcconfig */,
+				BB6DA26D9E37D9E39322B906 /* Pods-RickyMortyApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EE4A11980259FC6EBCE12EA9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4FD9EA594E4DEABC4E8488D0 /* Pods_RickyMortyApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EF02C31A2E572AD90097A604 = {
 			isa = PBXGroup;
 			children = (
 				EF02C3252E572AD90097A604 /* RickyMortyApp */,
 				EF02C3242E572AD90097A604 /* Products */,
+				67D06827D21E080895EC2EB9 /* Pods */,
+				EE4A11980259FC6EBCE12EA9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,6 +96,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF02C3362E572ADB0097A604 /* Build configuration list for PBXNativeTarget "RickyMortyApp" */;
 			buildPhases = (
+				40B2423D9CBF2F5D88AD6D87 /* [CP] Check Pods Manifest.lock */,
 				EF02C31F2E572AD90097A604 /* Sources */,
 				EF02C3202E572AD90097A604 /* Frameworks */,
 				EF02C3212E572AD90097A604 /* Resources */,
@@ -77,8 +109,6 @@
 				EF02C3252E572AD90097A604 /* RickyMortyApp */,
 			);
 			name = RickyMortyApp;
-			packageProductDependencies = (
-			);
 			productName = RickyMortyApp;
 			productReference = EF02C3232E572AD90097A604 /* RickyMortyApp.app */;
 			productType = "com.apple.product-type.application";
@@ -107,6 +137,9 @@
 			);
 			mainGroup = EF02C31A2E572AD90097A604;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				EF02CF762E5CAF7C0097A604 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = EF02C3242E572AD90097A604 /* Products */;
 			projectDirPath = "";
@@ -127,6 +160,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		40B2423D9CBF2F5D88AD6D87 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RickyMortyApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EF02C31F2E572AD90097A604 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,6 +198,7 @@
 /* Begin XCBuildConfiguration section */
 		EF02C3372E572ADB0097A604 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 540088688F8C844CA8EC37B6 /* Pods-RickyMortyApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -168,6 +227,7 @@
 		};
 		EF02C3382E572ADB0097A604 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB6DA26D9E37D9E39322B906 /* Pods-RickyMortyApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -337,6 +397,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EF02CF762E5CAF7C0097A604 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EF02CF772E5CAF7C0097A604 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF02CF762E5CAF7C0097A604 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		EF02CF792E5CAF7C0097A604 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF02CF762E5CAF7C0097A604 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EF02C31B2E572AD90097A604 /* Project object */;
 }

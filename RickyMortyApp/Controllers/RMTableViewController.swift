@@ -6,11 +6,16 @@
 //
 
 import UIKit
+import FirebaseAnalytics
 
 class RMTabarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        Analytics.logEvent(AnalyticsEventScreenView,
+                           parameters: [AnalyticsParameterScreenName: "Tab bar Screen Select",
+                                       AnalyticsParameterScreenClass: "RMTabarViewController"])
         setUpTabs()
     }
 

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAnalytics
 
 class RMEpisodeViewController: UIViewController {
 
@@ -14,6 +15,9 @@ class RMEpisodeViewController: UIViewController {
 
         view.backgroundColor = .systemBackground
         title = "Episodes"
+        Analytics.logEvent(AnalyticsEventScreenView,
+                           parameters: [AnalyticsParameterScreenName: "EPISODES Screen Select",
+                                       AnalyticsParameterScreenClass: "RMEpisodeViewController"])
     }
 
 }
